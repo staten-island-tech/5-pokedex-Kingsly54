@@ -10,8 +10,8 @@ def names(data):
     for i in range(len(data)):
         print(data[i]["name"]["english"])
 # Add a language choice feature and print the pokemons name based on the user input
-x=input("Language")
-y=x.lower()
+lang=input("Language")
+y=lang.lower()
 def language(data):
     if y=="japanese":
         for i in range(len(data)):
