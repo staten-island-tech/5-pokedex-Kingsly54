@@ -28,19 +28,22 @@ def language(data):
 # Develop a function that creates a new list of pokemon based on the type the user searched for. If no pokemon was found of that type inform the user
 def type(data):
     g=input("type")
-    if g=="grass":
-        for i in range(len(data)):
-            if data[i]["type"][0]=="Grass":
+    for i in range(len(data)):
+        if range(len(data[i]["type"]))==1:
+            if data[i]["type"][1]==g or data[i]["type"][0]==g:
                 print(data[i]["name"])
               
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 def search(data):
     search=input("search")
+    list=[]
     x=0
-    for i in data[x]["name"]["english"]:
+    for i in range(len(data)):
         x=x+1
-        if i==search:
-            print(data[x]["name"]["english"])
-search(data)
+    for i in data[x]["name"]["english"]:
+        if search in i:
+            list.append(data[x]["name"]["english"])
+    print(set(list))
+type(data)
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
 
