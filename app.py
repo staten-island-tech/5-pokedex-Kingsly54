@@ -38,12 +38,12 @@ def type(data):
 #Develop a function to find all pokemon matching the name the user searched for. Ex. if "Char" return Charmander, Charmeleon and Charizard. Make the user aware if no pokemon was found. 
 def search(data):
     search=input("search")
-    numf=0
+    numfound=0
     for i in range(len(data)):
-        if search in data[i]["name"]:
+        if search in data[i]["name"]["english"]:
             print(data[i]["name"])
-            numf+=1
-    if numf==0: 
+            numfound+=1
+    if numfound==0: 
         print("No pokemon has been found")
 search(data)
 #For Leo/, help me come up with a clever final question, considering maybe showing all moves a pokemon has avaiable based on type
